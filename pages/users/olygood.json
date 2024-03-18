@@ -1,0 +1,13 @@
+{
+    "name": "Olygood",
+    "post": "developer Javascript",
+    "bio": "Hello it's Olygood i'm developer javascript,React,Nextjs,Figma,Photoshop,Ilustrator,",
+    "Hobies": "j'adord créer des petits jeu 2d sur Unity, j'aime aussi le design",
+    "img": "/images/olygood.png",
+    "resaux sociaux": {
+        "x": "https://x.com/olihuttmacher",
+        "instagram": "https://www.instagram.com/olygood",
+        "github": "https://www.github.com/olygood"
+    },
+    "email": "olygood@outlook.be"
+}

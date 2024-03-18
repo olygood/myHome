@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors:{
+        'color-yellow':'#FCF3CA',
+        'color-red':' #EF7B7B',
+        'color-green':'#C4EADA',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -17,4 +22,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
