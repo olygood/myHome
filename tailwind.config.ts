@@ -12,6 +12,10 @@ const config: Config = {
         'color-yellow':'#FCF3CA',
         'color-red':' #EF7B7B',
         'color-green':'#C4EADA',
+        'blue-steam': '#67c1f5',
+        'white-steam-a': '#c6d4df',
+        'white-steam-b': '#8f98a0',
+        'black-steam': '#282b31',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

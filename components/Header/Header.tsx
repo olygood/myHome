@@ -28,7 +28,13 @@ function Header() {
             <Link href="/blog">Blog</Link>
           </li>
           <li>
-            <Link href="/portfolio">Portfolio</Link>
+            <Link href="/art">Art</Link>
+          </li>
+          <li>
+            <Link href="/game">Game</Link>
+          </li>
+          <li>
+            <Link href="/devtools">Dev/tools</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>

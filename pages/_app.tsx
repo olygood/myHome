@@ -1,9 +1,9 @@
 // import { useRef,useEffect} from "react";
 import { AppProps } from "next/app";
 import "../app/globals.css";
-import "../components/components_style.css";
+
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const headerRef = useRef<HTMLHeadElement>(null);
