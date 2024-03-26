@@ -2,26 +2,25 @@
     text  blue :#5fbbf5,text grey:#8f988a ,#8f98a0
  */
 
-.container_mediaStudio {
+/*.container_mediaStudio {
   min-width: 500px;
   min-height: 400px;
   width: 500px;
   height: auto;
 }
-.container_media_studio{
-  width: 950px;
-  height: 500px; 
-  /* display: flex;
+*/
+/*.container_media_studio{
+ width: auto;
+height: auto; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
-.container_aside{
+*/
+/*.container_aside {
   width: 600px;
   height: auto;
   
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: center; */
-  /* align-items: center;  */
 }
+*/

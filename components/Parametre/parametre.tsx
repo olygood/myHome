@@ -2,7 +2,7 @@ import '../../app/globals.css'
 
 export function Parametre() {
     return (
-        <div style={{width: '500px', height: 'auto',display:"flex",justifyContent:"space-between"}} className="bg-black " >
+        <div style={{width: '500px', height: 'auto',display:"flex",justifyContent:"space-between"}} className="bg-gray-950 mb-2 " >
           
                 <div className=" p-2 text-white-steam-a">
                 <h3 className="text-blue-steam mb-2">Style</h3>

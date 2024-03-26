@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Media_studio.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import '../../app/globals.css';
+import "../../app/globals.css";
 //tableaux d'images-----------------------------------------------------
 const imagesApocalyptic: ImageProps[] = [
   {
@@ -43,6 +43,15 @@ const imagesSiderurgie: ImageProps[] = [
     retouche: "non",
   },
 ];
+const imagesNature: ImageProps[] = [
+  {
+    url: "/images/nature/abeille.jpg",
+    name: "Nature",
+    ia: "Midjourney",
+    date: "20-03-24",
+    retouche: "non",
+  },
+];
 //Interface-----------------------------------------------------
 interface ImageProps {
   name: string;
@@ -76,11 +85,14 @@ export default function Media_studio() {
       case "apocalyptic":
         setSelectImage(imagesApocalyptic[0]);
         break;
+      case "nature":
+        setSelectImage(imagesNature[0]);
+        break;
       default:
         setSelectImage(imagesDefault[0]);
     }
   };
-//switch images-----------------------------------------------------
+  //switch images-----------------------------------------------------
   let images: ImageProps[];
   switch (theme) {
     case "siderurgie":
@@ -89,13 +101,16 @@ export default function Media_studio() {
     case "apocalyptic":
       images = imagesApocalyptic;
       break;
+    case "nature":
+      images = imagesNature;
+      break;
     default:
       images = imagesDefault;
   }
 
   return (
-    <div className="flex flex-col items-start justify-start bg-slate-800 text-white ">
-      <h3 className="p-2">
+    <div className="flex flex-col  text-white-steam-b ">
+     {/* <h3 className="p-2">
         Serveur discord:
         <a
           href="https://discord.gg/d7Y64ZVrwU"
@@ -107,11 +122,14 @@ export default function Media_studio() {
           PromptParadise
         </a>
       </h3>
-      <h4 className="p-2">{`${selectImage.name} `}</h4>
+      <h4 className="p-2 text-blue-steam">{`${selectImage.name} `}</h4>
+      */}
+      {/*container ------------------------------------------------- */}
       <div
-        className={`${styles.container_media_studio} flex flex-row border-2 border-red-500 `}
+        className={`${styles.container_media_studio} flex mb-12`}
       >
-        <div className="flex flex-col items-center justify-start button-click h-full w-52 bg-slate-800 p-2 ">
+        {/* div de gauche--------------------------------------------*/}
+        <div className="flex flex-col items-center justify-start p-2 w-1/6">
           <button
             onClick={() => changeTheme("siderurgie")}
             className="bg-gray-300 border-2 border-gray-400 mb-4 text-red-600"
@@ -125,47 +143,54 @@ export default function Media_studio() {
           >
             <p className="p-1">Apocalyptic</p>
           </button>
+          <button
+            onClick={() => changeTheme("nature")}
+            className="bg-gray-300 border-2 border-gray-400 mb-4 text-red-600"
+          >
+            <p className="p-1">Nature</p>
+          </button>
         </div>
-
+        {/* div du milieu--------------------------------------------*/}
         <div
-          className={`${styles.container_mediaStudio} flex flex-col border-2 border-gray-600 bg-gray-950`}
+          className=" flex flex-col w-2/3"
         >
-          <div className="h-64 w-full ">
+          <div className="">
             <img
               src={selectImage.url}
               alt="sky_game"
-              width={500}
+              width={1000}
               height={100}
-              className="h-full w-full object-contain"
+              
             />
           </div>
-          <div className="flex flex-row items-center justify-center border-2 border-gray-600 gap-2">
+          <div className="flex flex-row items-center justify-center gap-2">
             {images.map((image) => (
               <img
                 key={image.url}
                 onClick={() => handleClick(image.url)}
                 src={image.url}
                 alt="decor"
-                width={140}
+                width={200}
                 height={70}
                 className="h-full object-cover"
               />
             ))}
           </div>
         </div>
+        {/* div de droite--------------------------------------------*/}
         <div
-          className={`${styles.container_aside} flex flex-col justify-between bg-slate-800 border-2 border-gray-400 p-2`}
+          className="w-1/4 pl-2 pr-2 "
         >
-          <h3 className="text-white mb-1 p-1">{selectImage.name}</h3>
+          <h3 className="text-blue-steam mb-1 ">{selectImage.name}</h3>
 
           <Image
             src={selectImage.url}
             alt="medias-aside"
-            width={300}
+            width={400}
             height={400}
-            className="object-cover max-h-[35%]"
+            className=""
           />
-          <div className="p-2 text-text-steam">
+          <div className="p-1 text-text-steam">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
               itaque vel voluptas vitae quos deserunt nam sed exercitationem
@@ -174,7 +199,7 @@ export default function Media_studio() {
             </p>
           </div>
 
-          <div className="p-2 ">
+          <div className="p-1 ">
             {/* ici midjourney dois etre remplacer par {} et du css  */}
             <div className="flex flex-row gap-2">
               <p className="text-gray-400">ia : </p>
