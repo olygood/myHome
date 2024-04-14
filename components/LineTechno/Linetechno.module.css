@@ -1,0 +1,9 @@
+.backgroundImage{
+    background-image: url('/images/postdetravail.png');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+   
+}

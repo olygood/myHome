@@ -8,6 +8,10 @@ import { getPlaiceholder } from "plaiceholder";
 import { promises as fs } from "fs";
 import EnAvant from "@/components/EnAvant/Enavant";
 
+import siderurgie from "../data/articlesSiderurgie.json";
+import apocalyptic from "../data/articlesApocalyptic.json";
+import nature from "../data/articlesNature.json";
+
 export async function getStaticProps() {
   const imageBuffer = await fs.readFile("./public/images/sky_game.png");
   const { base64 } = await getPlaiceholder(imageBuffer);
@@ -36,17 +40,26 @@ export default function Home({ blurDataUrl }: HomeProps) {
         <Affiche_sous />
       </div>
       <h2 className="mb-2 p-2">Voici les Nouveautés</h2>
-      <div className="flex flex-row justify-around items-center mb-4">
-        <EnAvant />
-        <EnAvant />
-       
+      {/*les articles-------------------------------------------------- */}
+      <div className="flex flex-col items-center justify-around">
+        {siderurgie.map((el, index) => (
+          <EnAvant
+            key={index}
+            title={el.title}
+            article={el.article}
+            imgUrl={el.imgUrl}
+          />
+        ))}
+        ,
+        {apocalyptic.map((el, index) => (
+          <EnAvant
+            key={index}
+            title={el.title}
+            article={el.article}
+            imgUrl={el.imgUrl}
+          />
+        ))}
       </div>
     </div>
   );
-}
-{
-  /* <div className="container-index flex flex-col items-center ">
-<div className="container_affiche "><Affiche /></div>
-  <div className="container_affiche "><Affiche_sous /></div>
-</div> */
 }

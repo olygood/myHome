@@ -29,14 +29,14 @@ const imagesApocalyptic: ImageProps[] = [
 ];
 const imagesSiderurgie: ImageProps[] = [
   {
-    url: "/images/siderurgie/apocalyptic_still.png",
+    url: "/images/siderurgie/outdoor_1.png",
     name: "Siderurgie",
     ia: "Midjourney",
     date: "20-03-24",
     retouche: "non",
   },
   {
-    url: "/images/siderurgie/post_apocalyptic_still_2_up.png",
+    url: "/images/siderurgie/indoor_1.png",
     name: "Siderurgie",
     ia: "dall-e",
     date: "19-03-24",
@@ -52,6 +52,15 @@ const imagesNature: ImageProps[] = [
     retouche: "non",
   },
 ];
+const imagesDefault: ImageProps[] = [
+  { 
+    url: "/images/splatch1.png", 
+    name: "olygood",
+    ia: "",
+    date: "",
+    retouche: "photoshop" 
+  }
+];
 //Interface-----------------------------------------------------
 interface ImageProps {
   name: string;
@@ -62,9 +71,6 @@ interface ImageProps {
 }
 
 export default function Media_studio() {
-  const imagesDefault: ImageProps[] = [
-    { url: "/images/decor_1.png", name: "", ia: "", date: "", retouche: "" },
-  ];
   const [selectImage, setSelectImage] = useState<ImageProps>(imagesDefault[0]);
   const [theme, setTheme] = useState<string>("default");
 
@@ -109,60 +115,44 @@ export default function Media_studio() {
   }
 
   return (
-    <div className="flex flex-col  text-white-steam-b ">
-     {/* <h3 className="p-2">
-        Serveur discord:
-        <a
-          href="https://discord.gg/d7Y64ZVrwU"
-          className="text-blue-steam"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          PromptParadise
-        </a>
-      </h3>
-      <h4 className="p-2 text-blue-steam">{`${selectImage.name} `}</h4>
-      */}
-      {/*container ------------------------------------------------- */}
-      <div
-        className={`${styles.container_media_studio} flex mb-12`}
-      >
+   
+    
+    
+      <div className="flex justify-around items-start border-2 border-blue-600 min-h-screen p-2">
         {/* div de gauche--------------------------------------------*/}
-        <div className="flex flex-col items-center justify-start p-2 w-1/6">
+        <div className="w-1/12 flex flex-col items-center justify-start p-2">
           <button
             onClick={() => changeTheme("siderurgie")}
-            className="bg-gray-300 border-2 border-gray-400 mb-4 text-red-600"
+            className="rounded-lg bg-blue-steam border-2 border-gray-400 mb-4 hover:text-2xl"
           >
-            <p className="p-1">Siderurgie</p>
+            <p className="text-regular text-slate-950 p-1">Siderurgie</p>
           </button>
 
           <button
             onClick={() => changeTheme("apocalyptic")}
-            className="bg-gray-300 border-2 border-gray-400 mb-4 text-red-600"
+            className="rounded-lg bg-blue-steam border-2 border-gray-400 mb-4 hover:text-2xl "
           >
-            <p className="p-1">Apocalyptic</p>
+            <p className="text-regular text-slate-950 p-1">Apocalyptic</p>
           </button>
           <button
             onClick={() => changeTheme("nature")}
-            className="bg-gray-300 border-2 border-gray-400 mb-4 text-red-600"
+            className="rounded-lg bg-blue-steam border-2 border-gray-400 mb-4 hover:text-2xl"
           >
-            <p className="p-1">Nature</p>
+            <p className="text-regular text-slate-950 p-1">Nature</p>
           </button>
         </div>
         {/* div du milieu--------------------------------------------*/}
-        <div
-          className=" flex flex-col w-2/3"
-        >
-          <div className="">
+        <div className="w-7/12 flex flex-col">
+          {/* image du dessus*/}
+          <div className="w-full h-[600px] mb-1">
             <img
               src={selectImage.url}
-              alt="sky_game"
-              width={1000}
-              height={100}
-              
+              alt="all_images"
+              className="w-full h-full object-scale-down"
             />
+              
           </div>
+          {/* images du dessous*/}
           <div className="flex flex-row items-center justify-center gap-2">
             {images.map((image) => (
               <img
@@ -172,15 +162,13 @@ export default function Media_studio() {
                 alt="decor"
                 width={200}
                 height={70}
-                className="h-full object-cover"
+                className="h-full object-cover object-center"
               />
             ))}
           </div>
         </div>
         {/* div de droite--------------------------------------------*/}
-        <div
-          className="w-1/4 pl-2 pr-2 "
-        >
+        <div className="w-1/4 pl-2 pr-2 ">
           <h3 className="text-blue-steam mb-1 ">{selectImage.name}</h3>
 
           <Image
@@ -188,10 +176,10 @@ export default function Media_studio() {
             alt="medias-aside"
             width={400}
             height={400}
-            className=""
+            className="object-cover"
           />
           <div className="p-1 text-text-steam">
-            <p>
+            <p className="text-white-steam-b">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
               itaque vel voluptas vitae quos deserunt nam sed exercitationem
               cum. Porro asperiores nihil, blanditiis quos libero sit.
@@ -202,20 +190,20 @@ export default function Media_studio() {
           <div className="p-1 ">
             {/* ici midjourney dois etre remplacer par {} et du css  */}
             <div className="flex flex-row gap-2">
-              <p className="text-gray-400">ia : </p>
+              <p className="text-white-steam-a">ia : </p>
               <p className="text-blue-steam ">{selectImage.ia}</p>
             </div>
             <div className=" flex flex-flex-row gap-2">
-              <p className="text-gray-400">date :</p>
+              <p className="text-white-steam-a">date :</p>
               <p className="text-blue-steam">{selectImage.date}</p>
             </div>
             <div className="flex flex-row gap-2">
-              <p className="text-gray-400">retouche :</p>
+              <p className="text-white-steam-a">retouche :</p>
               <p className="text-blue-steam"> {selectImage.retouche}</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }

@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import '../app/globals.css'
-
+import Link from 'next/link'
+import Contact from '@/pages/contact'
 export default function Back_info() {
     return (
         <div className='flex w-full flex-row justify-between items-center p-2 bg-slate-950'>
 
             <div className='flex flex-row gap-3' >
                 <div className='back_image border-2 border- border-slate-200  overflow-hidden'> 
-                    <Image src="/images/olygood.jpg" alt="Back_info" width={50} height={50} />
+                    <Link href="/contact"><Image src="/images/olygood.jpg" alt="Back_info" width={50} height={50} /></Link>
                 </div>
 
                 <div className='flex justify-center flex-col text-lg'>

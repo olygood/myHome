@@ -1,0 +1,98 @@
+[
+  {
+    "identifiant": {
+      "id": 1
+    }
+  },
+  {
+    "info": {
+      "name": "Olivier",
+      "firstname": "Huttmacher",
+      "post": "Developer web",
+      "email": "olygood@outlook.com",
+      "country": "Belgique",
+      "city": "Liège",
+      "image": "avatar.jpg",
+      "website": "www.olygood.com"
+    }
+  },
+
+  {
+    "work": {
+      "entreprise": "Arcelor Mittal",
+      "post": "Ouvrier polyvalent",
+      "start": "05-05-1999",
+      "end": "2015-01-05",
+      "description": "ouvier polyvalent arcelor mittal"
+    }
+  },
+  {
+    "formations": {
+      "entreprise": "Technifutur",
+      "start": "01-10-2017",
+      "end": "30-05-2018",
+      "description": "formation Unity3D et C#"
+    }
+  },
+
+{
+        "socials": [
+          {
+            "linkedin": "Linkedin",
+            "link": "www.linkedin.com/in/olygood"
+          },
+          {
+            "github": "Github",
+            "link": "www.github.com/olygood"
+          },
+          {
+            "x": "Twitter",
+            "link": "www.twitter.com/olihuttmacher"
+          },
+          {
+            "facebook": "Facebook",
+            "link": "www.facebook.com/olygood"
+          },
+          {
+            "instagram": "Instagram",
+            "link": "www.instagram.com/olygood"
+          }
+        ]
+      },
+      {
+        "skills": [
+          {
+            "name": "HTML",
+            "level": "90%"
+          },
+          {
+            "name": "CSS",
+            "level": "80%"
+          },
+          {
+            "name": "Javascript",
+            "level": "70%"
+          },
+          {
+            "name": "React",
+            "level": "60%"
+          },
+          {
+            "name": "NextJS",
+            "level": "50%"
+          },
+          {
+            "name": "Nodejs",
+            "level": "40%"
+          },
+          {
+            "name": "Unity3D",
+            "level": "30%"
+          }
+        ]
+      }
+
+  
+ 
+  
+]
