@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header/Header";
 import Affiche from "@/components/Affiche/Affiche";
-import Affiche_sous from "@/components/Affiche_sous";
+import Affiche_sous from "@/components/AfficheSous/Affiche_sous";
 import "../app/globals.css";
 import { getPlaiceholder } from "plaiceholder";
 import { promises as fs } from "fs";

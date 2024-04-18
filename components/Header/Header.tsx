@@ -17,7 +17,7 @@ function Header() {
           <li>
             <Link href="/">
               <Image
-                src="/images/home_black_24dp.png"
+                src="/images/icons/home_black_24dp.png"
                 alt="logo"
                 width={48}
                 height={48}
@@ -25,19 +25,19 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog/blog">Blog</Link>
           </li>
           <li>
-            <Link href="/art">Art</Link>
+            <Link href="/art/art">Art</Link>
           </li>
           <li>
-            <Link href="/game">Game</Link>
+            <Link href="/game/game">Game</Link>
           </li>
           <li>
-            <Link href="/devtools">Dev/tools</Link>
+            <Link href="/devtools/devtools">Dev/tools</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact/contact">Contact</Link>
           </li>
         </ul>
       </nav>

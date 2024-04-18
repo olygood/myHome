@@ -1,16 +1,18 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-//COLORS-----------------------------------
+
+
 :root {
   --color-red: #ef7b7b;
   --color-jellow: #fcf3ca;
   --color-green: #c4eada;
-  /* --color-grey: #919190; */
+  
 }
 
-//RESET-----------------------------------
+
 * {
   margin: 0;
   padding: 0;
@@ -18,10 +20,10 @@
 
 }
 p{
-  /*font-family: "Raleway-ExtraLight", sans-serif;*/
+  
   font-family: "Raleway-Light", sans-serif;
 }
-//format des Tailles de titres------------
+
 h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -56,7 +58,7 @@ h5 {
   font-family: "Raleway-Regular", sans-serif;
 
 }
-//Fonts-----------------------------------
+
 @font-face {
   font-family: "Raleway-Regular";
   src: url("/fonts/raleway/Raleway-Regular.ttf") format("truetype");
@@ -77,6 +79,13 @@ h5 {
   font-family: "Raleway-Thin";
   src: url("/fonts/raleway/Raleway-Thin.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Anton-Regular";
+  src: url("/fonts/anton/Anton-Regular.ttf") format("truetype");
+}
+.text-anton {
+  font-family: "Anton-Regular", sans-serif;
+}
 .text-thinItalic {
   font-family: "Raleway-ThinItalic", sans-serif;
 }
@@ -92,19 +101,12 @@ h5 {
 .text-light {
   font-family: "Raleway-Light", sans-serif;
 }
-//----------------------------------------
-//SCROLL----------------------------------
+
+
 html {
   overflow-y: scroll;
 }
-/* html::-webkit-scrollbar {
-  display: none;
-}  */
-//CONTAINER--------------------------------
-.myUniqueContainer_app {
-  /* border: 1px solid red; */
-  /*background-color: #f5f5f5;*/
-}
+
 .container-index {
   width: 100%;
   height: auto;
@@ -113,5 +115,5 @@ html {
   margin-bottom: 5px;
   gap: 5px;
   margin-bottom: 10px;
-  /* border: 1px solid red; */
-}
+ 
+} 

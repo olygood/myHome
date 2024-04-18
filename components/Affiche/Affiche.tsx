@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Back_info from "../Back_info";
+import Back_info from "../BackInfo/Back_info";
 import '../../app/globals.css'
 import {getPlaiceholder} from 'plaiceholder'
 

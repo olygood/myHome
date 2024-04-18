@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LineTechno from "../components/LineTechno/LineTechno";
-import Card_blog from "../components/Card_blog/Card_blog";
+import LineTechno from "../../components/LineTechno/LineTechno";
+import Card_blog from "../../components/Card_blog/Card_blog";
 import { TwitterApi } from "twitter-api-v2";
 import { useEffect, useState } from "react";
 

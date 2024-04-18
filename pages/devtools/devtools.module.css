@@ -1,0 +1,21 @@
+.clipPathDiv{
+   
+    clip-path: polygon(0 40%, 100% 74%, 100% 100%, 0% 100%);
+    background-color: #030426;
+}
+@media (max-width: 1000px) {
+    .clipPathDiv{
+        clip-path: polygon(0 50%, 100% 80%, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 785px) {
+    .clipPathDiv{
+        clip-path: polygon(0 70%, 100% 80%, 100% 100%, 0% 100%);
+    }
+}
+@media (max-width: 640px) {
+    .clipPathDiv{
+        visibility: hidden;
+    }
+}

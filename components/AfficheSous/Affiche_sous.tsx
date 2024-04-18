@@ -1,6 +1,6 @@
 import Image from "next/image";
-import '../app/globals.css'
-import Back_info from "./Back_info";
+import '../../app/globals.css'
+import Back_info from "../BackInfo/Back_info";
 
 export default function Affiche_sous() {
   return (
